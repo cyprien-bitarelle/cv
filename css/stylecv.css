@@ -1,0 +1,268 @@
+/* Mise en page ordinateurs et tablettes */
+
+/* page's global design */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+strong {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
+}
+
+main {
+  display: flex; 
+  width: 100%;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+/* Navigation buttons */
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(153, 155, 151, 0.411);
+}
+
+nav ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  border-left: 2px solid black;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  min-width: 100%;
+  color: black;
+  text-decoration: none;
+  transition: 1s;
+  text-align: center;
+  opacity: 0.4;
+}
+
+nav ul li a:hover {
+  background-color: rgb(70, 66, 66);
+  opacity: 1;
+}
+
+/* Bandeau haut de page */
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+header h2 {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+aside p {
+  color: rgb(216, 114, 219);
+  font-size: 20px;
+}
+
+header {
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  min-height: 300px;
+  min-width: fit-content;
+  background-color: #2a2b2f;
+  align-items: center;
+  justify-items: center;
+}
+
+img {
+  border: solid #2a2b2f 2px;
+  border-radius: 20%;
+}
+
+/* left section */
+
+#section1 {
+  width: 400px;
+  background-color: #2a2b2f;
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#section1 a {
+  color: rgb(140, 62, 143);
+}
+
+#section1 h2 {
+  padding: 20px 0px 20px 0px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+#Contact,
+#Hobbies,
+#Skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Hobbies ul,
+#Contact ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#Contact ul {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#Hobbies ul li,
+#Contact ul li {
+  list-style-type: none;
+  background-color: black;
+  border: 1px black solid;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+.border_bot {
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+#Contact ul,
+#Hobbies ul,
+#Skills ul {
+  padding-bottom: 40px;
+}
+
+/* right section */
+
+#section2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: dimgray;
+}
+
+.titre-right {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: space-between;
+}
+
+#Formations,
+#Experiences {
+  text-transform: uppercase;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  border-bottom: white 1px solid;
+  align-self: flex-end;
+  color: #ffffff;
+}
+
+#section2 ul {
+  margin-left: 10%;
+}
+
+#section2 a {
+  color: #ffffff;
+}
+
+.border-left {
+  border-left: 1px solid rgb(243, 237, 243);
+  padding-left: 10px;
+  list-style-type: none;
+  margin-bottom: 50px;
+  line-height: 20px;
+}
+
+.listing {
+  padding-top: 20px;
+}
+
+/* anchor to the top */
+
+#haut-page {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+#haut-page:hover {
+  opacity: 1;
+}
+
+/* page footer */
+
+footer {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* Mise en page téléphone */
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #section1 {
+    width: 100%;
+  }
+
+  #Formations,
+  #Experiences {
+    align-self: center;
+  }
+
+  #section2 {
+    align-items: center;
+  }
+}
